@@ -30,4 +30,10 @@ jobs:
       run: |
         pytest tests/
 
-    # Additional steps for deployment or other tasks can be added here.
+    # You can also add a debugging step to check for environment issues:
+    - name: Debug Info
+      run: |
+        echo "Python Version: $(python --version)"
+        echo "Pip Version: $(pip --version)"
+        echo "Installed Packages:"
+        pip freeze
